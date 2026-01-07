@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cyber-black: #050505;
+  --color-cyber-dark: #0a0a0b;
+  --color-cyber-blue: #00f2ff;
+  --color-cyber-cyan: #00d8ff;
+  --color-cyber-red: #ff003c;
+  --color-cyber-green: #00ff9f;
+  --color-cyber-yellow: #fdf500;
+  --color-cyber-purple: #bc00ff;
+
+  --background-image-glass-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.005));
+
+  --shadow-neon-blue: 0 0 10px rgba(0, 242, 255, 0.5), 0 0 20px rgba(0, 242, 255, 0.3);
+  --shadow-neon-red: 0 0 10px rgba(255, 0, 60, 0.5), 0 0 20px rgba(255, 0, 60, 0.3);
+}
+
+@layer base {
+  body {
+    @apply bg-cyber-black text-gray-100 overflow-x-hidden;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Updated Glassmorphism: Darker base for better text readability */
+.glass-morphism {
+  @apply bg-[#0a0a0b]/80 backdrop-blur-xl border border-white/10 shadow-lg;
+}
+
+.neon-border-blue {
+  @apply border border-cyber-blue shadow-neon-blue;
+}
+
+.neon-border-red {
+  @apply border border-cyber-red shadow-neon-red;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.animated-bg {
+  background: radial-gradient(circle at center, #11111f 0%, #000000 100%);
+}
